@@ -1,5 +1,6 @@
-# javascript-get-started
-JavaScript getting started guide and simple code assignments
+# What Is This?
+
+The intention of this guide is to provide a simple introduction to programming with JavaScript to **absolute beginners**. If you have used the language before and have a reasonable understanding of internet technologies this is probably not for you.
 
 ## Basics
 
