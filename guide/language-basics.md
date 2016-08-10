@@ -18,6 +18,7 @@ Keeping things simple, JavaScript consists of:
 |variable|```var count = 1;``` *count* is a variable. It's value may change.|
 |operator|```5 + 5``` or ```20 / 3``` or ```3 * 6``` or ```++``` (add one) or ```--``` (subtract one) and more. ```=``` is an **assignment** operator (see below)|
 |assignment|```count = 2``` Assigns the variable *count* with the value 2. **Note:** single =|
+|assignment|```count += 2``` Adds 2 to the variable *count*. ```count -= 2``` Takes 2 away from the variable *count*|
 |condition|```count == 2``` Checks whether the variable *count* is equal to 2. **Note:** double =|
 |block|```{ var count = 1; var x = 2; }```. *count* and *x* are only available between the *{* and *}*|
 |function|```function celsiusToFahrenheit(celsius)```. Defines the function *celsiusToFahrenheit* which takes one parameter, *celsius*|
