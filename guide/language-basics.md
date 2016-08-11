@@ -30,19 +30,102 @@ Keeping things simple, JavaScript consists of:
 
 JavaScript is processed top-down, looping where necessary. When the code gets to the last line, it has typically finished.
 
+    /*
+     * This is a simple piece of JavaScript code
+     */
+    "use strict";                   // force Strict Mode
+    var max = 10;					// variable declaration
+    var sum = 0;
+    for (var i = 1; i < max; ++i)	// loop
+    {
+        sum += i;                   // Add the value of i to sum
+    }
+    alert("The sum is: " + sum);    // Tell the user the sum value
+
+Don't worry too much if you don't understand what's going on above, we'll cover it later.
+
+The piece of code (which you can see in action [here](https://jsfiddle.net/oconnedk/x6d79hbv/2/) is a simple *script* (which is what one page JavaScript programs are typically called) which does this - by line:
+
+1. ```/*``` opens a comment block and ```*/``` closes it. A comment does nothing other than tell the reader what's going on
+2. This line is within the comment block, so does nothing
+3. The end of the comment block. Also does nothing.
+4. ```"use strict";``` tells the JavaScript *interpreter* (more on that, later) to interpret the following script in *strict mode*. Long story short: this is good practice and you should do it.
+5. Declares a variable ```max```, initialising with the number ```10```
+6. Declares a variable ```sum```, initialising with the number ```0```
+7. A ```for``` **loop**. This tells the interpreter to execute the following block (lines 8 - 10) while ```i``` is less than (```<```) 10. 
+8. Marks the start of a *block*, which ends at line 10
+9. Add the value of ```i``` to ```sum```
+10. Ends the block (and hence ends the loop)
+11. Displays the sum of 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9
+
+The script above runs over lines 8 to 10 nine times, while the value of i is less than 10.
+The very last line of the script calls a *function* which displays a box on the screen showing the total.
+ 
+
 ### Loops
 
+Loops cause part of a script to repeat. For example, line 7 in the script above tells the interpreter to run the lines in the block while i is less than ten, incrementing the value of i each time.
+
+#### For Loops
+
+A ```for``` loop is an example of a *definite* loop as we know beforehand how many times the loop will repeat. This is roughly true and is OK for now, but as you will later discover, you can exit a ```for``` loop early.
+
+    for (var i = 1; i < 10; ++i)
+    {
+        ...
+    }
+
+In the above loop, ```i``` would have the value 1 first time around the loop, then 2, then 3 up until 9. It doesn't get to 10 as we have the *condition* ```i < 10``` and 10 is not less than 10.
+If we wanted it to go to 10, we could modify it like this:
+
+    for (var i = 1; i <= 10; ++i)
+    {
+        ...
+    }
+
+The ```<=``` in the condition is the key thing that changed. And 10 is <= 10 as it's equal to 10.
+
+A **real-world example of a for loop** could be when a teacher is taking a register: they start from the top of the list until they reach the bottom, marking students present or not.
+
+#### While Loops
+
+
+A ```while``` loop is an example of an *indefinite* loop as we do not know beforehand how many times the loop will repeat - or if it will even repeat at all. 
+
+You *can* use a while loop like a ```for``` loop, but you should only do so if you have a specific reason.
+
+Here is a simple example of a ```while``` loop:
+
+    var number = 128;
+    while (number > 1)
+    {
+        number = number / 2;
+    }
+
+The above will take the variable ```number``` and divide it by 2, repeating until the number is no longer greater than one (e.g. 64, 32, 16, 8, 4 and 2).
+
+This is an example of a loop that will not run at all:
+    
+    var loopAgain = false;
+    while (loopAgain)
+    {
+        ...
+    }
+
+It won't run because the condition it is checking (```loopAgain``` has the value ```false```).
+
+A **real-world example of a while loop** could be a guessing game. I say: "think of a number between 1 and 10" and keep asking you to guess again until you get the number right. Or I may not need to ask you to guess again if you et it right first time.
 
 ### Types
 |Type|Description|
 |---|---|
-|String|e.g. ```"hello"```, ```'hello'``` etc|
+|String|e.g. ```"hello"```, ```'hello'```, ```"3.1415972"```, ```"172.217.23.14"``` etc|
 |Number|e.g. ```1```, ```3.1415972```|
 |Boolean|e.g. ```true``` or ```false```|
 |Undefined|A special value when a value is not specified. More on this later.|
 |Null|A value representing "no value". E.g. a value of ```NULL``` has actually specified, typically to initialise a variable. *Not the same as undefined*.|
 |Object|An instance of an object which may be your own object (when using Object-Oriented techniques) or one of the in-built classes (e.g. RegExp).|
-|Array|A collection of values - which may be of any type, but will typically be of the same type. E.g. a list of names ```["Dave", "Pete", "John"];```|
+|Array|A collection of values - which may be of any type (string, number, boolean, array even), but will typically be of the same type. E.g. a list of names ```["Dave", "Pete", "John"];```|
 
 ### Reserved Words
 
