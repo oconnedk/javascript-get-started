@@ -140,3 +140,14 @@ Consider this for example:
     }
     
 We are trying to find out whether a variable named *true* is "true". It makes the code ambiguous and is not allowed.    
+
+### Functions
+
+Functions can be in-built to the language (e.g. ```length("ABC")``` - ```length``` will return the length of a string) or user-defined.
+
+Where they are user-defined, it will be either *you* that created the function or someone else (which is the case if you use a *library* - more on that later).
+
+Functions typically *return* a value, so in the example of the ```length``` function, the number 3 would be returned for ```length("ABC")```. We can capture the result in a *variable*:
+ 
+    var nameLength = length("Peter Piper");
+    
