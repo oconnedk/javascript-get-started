@@ -147,7 +147,27 @@ Functions can be in-built to the language (e.g. ```length("ABC")``` - ```length`
 
 Where they are user-defined, it will be either *you* that created the function or someone else (which is the case if you use a *library* - more on that later).
 
-Functions typically *return* a value, so in the example of the ```length``` function, the number 3 would be returned for ```length("ABC")```. We can capture the result in a *variable*:
+Functions often receive one or more *parameters* and typically *return* a value, so in the example of the ```length``` function, the number 3 would be returned for ```length("ABC")```. We can capture the result in a *variable*:
  
     var nameLength = length("Peter Piper");
-    
+
+So, putting some of what we've learnt so far, that line of code declares a *variable* called ```nameLength``` which is *assigned* with the value of ```length("Peter Piper")```. ```length``` is a function, which in this case is passed a parameter with the *constant string* "Peter Piper".
+
+#### User-defined Functions
+
+Sometimes the functions provided by JavaScript are not quite enough and you want to do something different. That is where you will write you own function. Like this:
+
+    function addValues(lhs, rhs)
+    {
+        return lhs + rhs;
+    }
+
+In case you haven't already figured it out, that function returns the sum of the two variables, ```lhs``` and ```rhs```. And this is how you might call it:
+
+    var sum = addValues(5, 6);
+
+Now, we have a newly-declared *variable*, ```sum``` which has the result of ```5``` + ```6```, so ```11```. ```5``` and ```6``` are *constants* which are passed as *parameters* to the function.
+
+### Operators and Assignments
+
+[Keep reading](/guide/language-operators-assign.md)
