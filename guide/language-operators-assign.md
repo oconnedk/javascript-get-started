@@ -66,4 +66,4 @@ e.g.
 
 # Conditions
 
-[Keep reading](/guide/language-onditions.md)
+[Keep reading](/guide/language-conditions.md)
