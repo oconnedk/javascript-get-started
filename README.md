@@ -2,7 +2,9 @@
 
 The intention of this guide is to provide a simple introduction to programming with JavaScript to **absolute beginners**. If you have used the language before and have a reasonable understanding of internet technologies this is probably not for you.
 
-It will focus on the *functional* aspect of JavaScript, ignoring (for now) the various [Object-Oriented](https://en.wikipedia.org/wiki/Object-oriented_programming) features. 
+Don't be put off if you don't understand absolutely everything (anything, even), perseverance is rewarded. Most of the terms you read early on will be mentioned frequently, which given the context will help clarification.
+
+The guide focuses on the *functional* aspect of JavaScript, ignoring (for now) the various [Object-Oriented](https://en.wikipedia.org/wiki/Object-oriented_programming) features.
 
 See the [resources](/guide/javascript-resources.md) page for more information on some of the basic principles of JavaScript and the web. It is recommended that you take the *JavaScript* as well as *HTML* track on [Codecademy](https://www.codecademy.com).
 
@@ -15,6 +17,12 @@ When you see an animation on a web page, that is typically the front-end. Like [
 
 **Back-end** = the code runs on a server/ collection of servers. 
 E.g. this search for "Spongebob" on Amazon: https://www.amazon.co.uk/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=spongebob
+
+> A simple analogy for the distinction between front-end and back-end processing is maths. You are asked to divide 9 by 7 to 5 decimal places.
+
+> **Front-end** processing would be you doing the long division to work out the answer. E.g. you do all the hard work.
+
+> **Back-end** processing would be you using a calculator to do the hard work. Presuming you are OK at maths, you should have the same result, but one will have taken considerably longer than the other and will have prevented you from doing other things.
 
 A technology called [Node.js](https://nodejs.org/) allows you to run JavaScript on a server, meaning that Amazon could have been written using Node.js (but it probably wasn't).
 
