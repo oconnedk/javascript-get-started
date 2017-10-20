@@ -6,11 +6,13 @@ The result of a condition is always a *boolean* - ```true``` or ```false```.
 
 E.g.
 
-    var age = 18;
-    var olderThan18 = age > 18;    // == false
-    var youngerThan18 = age < 18;  // == false
-    var isAnAdult = age >= 18;     // == true
-    var is18 = age == 18;          // == true
+```javascript
+var age = 18;
+var olderThan18 = age > 18;    // == false
+var youngerThan18 = age < 18;  // == false
+var isAnAdult = age >= 18;     // == true
+var is18 = age == 18;          // == true
+```
 
 ## Logical Operators
 
@@ -18,7 +20,9 @@ Keeping things simple, we have AND (```&&```), OR (```||```), NOT (```!```) and 
 
 E.g.
 
-    var age = 18;
-    var ageBetween18And21 = age >= 18 && age <= 21;  // true
-    var doesntNeedToWork = age <16 || age >= 65;     // false
-    var isNot21 = age != 21;                         // true
+```javascript
+var age = 18;
+var ageBetween18And21 = age >= 18 && age <= 21;  // true
+var doesntNeedToWork = age <16 || age >= 65;     // false
+var isNot21 = age != 21;                         // true
+```
