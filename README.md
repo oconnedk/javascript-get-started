@@ -61,23 +61,25 @@ When running JavaScript in a browser, you'll view a page which is in **HTML**, c
 
 Here's some sample HTML. Note: ```<!--``` and ```-->``` are start and end tags for comments.
 
-    <html>
-    <head>
-        <script type="text/javascript" src="/js/main.js"></script>  <!-- this is a link to the JavaScript -->
-        <link rel="stylesheet" href="/css/main.css" />              <!-- this is a link to the CSS -->
-    </head>
-    <body>
-        <script type="text/javascript">                             <!-- this is JavaScript embedded in the page -->
-            var count = 1;
-        </script>
-        <style type="text/css">                                     <!-- this is CSS embedded in the page -->
-            P {
-                font-weight: bold;
-            }
-        </style>
-        <p>This is the main page</p>
-    </body>
-    </html>
+```html
+<html>
+<head>
+    <script type="text/javascript" src="/js/main.js"></script>  <!-- this is a link to the JavaScript -->
+    <link rel="stylesheet" href="/css/main.css" />              <!-- this is a link to the CSS -->
+</head>
+<body>
+    <script type="text/javascript">                             <!-- this is JavaScript embedded in the page -->
+        var count = 1;
+    </script>
+    <style type="text/css">                                     <!-- this is CSS embedded in the page -->
+        P {
+            font-weight: bold;
+        }
+    </style>
+    <p>This is the main page</p>
+</body>
+</html>
+```
 
 ## Do this:
 
