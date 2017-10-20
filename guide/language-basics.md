@@ -14,7 +14,7 @@ Keeping things simple, JavaScript consists of:
  
 |What|JavaScript Example|
 |---|---|
-|constant|```12``` or ```"some words"```. They are both constants. 12 will always be 12.|
+|constant|```12``` or ```"some words"``` or ```const daysPerWeek = 7;```. These are all constants. 12 will always be 12, the *string* "some words" cannot be changed and `daysPerWeek` will always be 7.|
 |variable|```var count = 1;``` *count* is a variable. It's value may change.|
 |operator|```5 + 5``` or ```20 / 3``` or ```3 * 6``` or ```++``` (add one) or ```--``` (subtract one) and more. ```=``` is an **assignment** operator (see below)|
 |assignment|```count = 2``` Assigns the variable *count* with the value 2. **Note:** single =|
