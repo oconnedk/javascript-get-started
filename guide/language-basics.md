@@ -52,7 +52,7 @@ The piece of code (which you can see in action [here](https://jsfiddle.net/oconn
 2. This line is within the comment block, so does nothing
 3. The end of the comment block. Also does nothing.
 4. ```"use strict";``` tells the JavaScript *interpreter* (more on that, later) to interpret the following script in *strict mode*. Long story short: this is good practice and you should do it.
-5. Declares a variable ```max```, initialising with the number ```10```
+5. Declares a constant ```max```, initialising with the number ```10```
 6. Declares a variable ```sum```, initialising with the number ```0```
 7. A ```for``` **loop**. This tells the interpreter to execute the following block (lines 8 - 10) while ```i``` is less than (```<```) 10. 
 8. Marks the start of a *block*, which ends at line 10
