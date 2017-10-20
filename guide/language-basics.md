@@ -72,18 +72,22 @@ Loops cause part of a script to repeat. For example, line 7 in the script above 
 
 A ```for``` loop is an example of a *definite* loop as we know beforehand how many times the loop will repeat. This is roughly true and is OK for now, but as you will later discover, you can exit a ```for``` loop early.
 
-    for (var i = 1; i < 10; ++i)
-    {
-        ...
-    }
+```javascript
+for (var i = 1; i < 10; ++i)
+{
+    ...
+}
+```    
 
 In the above loop, ```i``` would have the value 1 first time around the loop, then 2, then 3 up until 9. It doesn't get to 10 as we have the *condition* ```i < 10``` and 10 is not less than 10.
 If we wanted it to go to 10, we could modify it like this:
 
-    for (var i = 1; i <= 10; ++i)
-    {
-        ...
-    }
+```javascript
+for (var i = 1; i <= 10; ++i)
+{
+    ...
+}
+```
 
 The ```<=``` in the condition is the key thing that changed. And 10 is <= 10 as it's equal to 10.
 
@@ -98,21 +102,25 @@ You *can* use a while loop like a ```for``` loop, but you should only do so if y
 
 Here is a simple example of a ```while``` loop:
 
-    var number = 128;
-    while (number > 1)
-    {
-        number = number / 2;
-    }
+```javascript
+var number = 128;
+while (number > 1)
+{
+    number = number / 2;
+}
+```
 
 The above will take the variable ```number``` and divide it by 2, repeating until the number is no longer greater than one (e.g. 64, 32, 16, 8, 4 and 2).
 
 This is an example of a loop that will not run at all:
     
-    var loopAgain = false;
-    while (loopAgain)
-    {
-        ...
-    }
+```javascript
+var loopAgain = false;
+while (loopAgain)
+{
+    ...
+}
+```
 
 It won't run because the condition it is checking (```loopAgain``` has the value ```false```).
 
@@ -135,11 +143,13 @@ There is a lengthy list of [reserved words](http://www.w3schools.com/js/js_reser
 
 Consider this for example:
 
-    var true = false;
-    if (true == true)
-    {
-        console.log("It's true");
-    }
+```javascript
+var true = false;
+if (true == true)
+{
+    console.log("It's true");
+}
+```
     
 We are trying to find out whether a variable named *true* is "true". It makes the code ambiguous and is not allowed.    
 
@@ -151,7 +161,9 @@ Where they are user-defined, it will be either *you* that created the function o
 
 Functions often receive one or more *parameters* and typically *return* a value, so in the example of the ```length``` function, the number 3 would be returned for ```length("ABC")```. We can capture the result in a *variable*:
  
-    var nameLength = length("Peter Piper");
+```javascript
+var nameLength = length("Peter Piper");
+```
 
 So, putting some of what we've learnt so far, that line of code declares a *variable* called ```nameLength``` which is *assigned* with the value of ```length("Peter Piper")```. ```length``` is a function, which in this case is passed a parameter with the *constant string* "Peter Piper".
 
@@ -159,14 +171,18 @@ So, putting some of what we've learnt so far, that line of code declares a *vari
 
 Sometimes the functions provided by JavaScript are not quite enough and you want to do something different. That is where you will write you own function. Like this:
 
-    function addValues(lhs, rhs)
-    {
-        return lhs + rhs;
-    }
+```javascript
+function addValues(lhs, rhs)
+{
+    return lhs + rhs;
+}
+```
 
 In case you haven't already figured it out, that function returns the sum of the two variables, ```lhs``` and ```rhs```. And this is how you might call it:
 
-    var sum = addValues(5, 6);
+```javascript
+var sum = addValues(5, 6);
+```
 
 Now, we have a newly-declared *variable*, ```sum``` which has the result of ```5``` + ```6```, so ```11```. ```5``` and ```6``` are *constants* which are passed as *parameters* to the function.
 
