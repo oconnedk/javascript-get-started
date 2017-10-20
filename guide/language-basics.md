@@ -46,7 +46,7 @@ alert("The sum is: " + sum);
 
 Don't worry too much if you don't understand what's going on above, we'll cover it later.
 
-The piece of code (which you can see in action [here](https://jsfiddle.net/oconnedk/x6d79hbv/2/) is a simple *script* (which is what one page JavaScript programs are typically called) which does this - by line:
+The piece of code (which you can see in action [here](https://jsfiddle.net/oconnedk/x6d79hbv/) is a simple *script* (which is what one page JavaScript programs are typically called) which does this - by line:
 
 1. ```/*``` opens a comment block and ```*/``` closes it. A comment does nothing other than tell the reader what's going on
 2. This line is within the comment block, so does nothing
