@@ -30,17 +30,19 @@ Keeping things simple, JavaScript consists of:
 
 JavaScript is processed top-down, looping where necessary. When the code gets to the last line, it has typically finished.
 
-    /*
-     * This is a simple piece of JavaScript code
-     */
-    "use strict";                   // force Strict Mode
-    var max = 10;					// variable declaration
-    var sum = 0;
-    for (var i = 1; i < max; ++i)	// loop
-    {
-        sum += i;                   // Add the value of i to sum
-    }
-    alert("The sum is: " + sum);    // Tell the user the sum value
+```javascript
+/*
+ * This is a simple piece of JavaScript code
+ */
+"use strict";                         // force Strict Mode
+const max = 10;                       // constant declaration
+var sum = 0;                          // variable used to store the sum
+for (var i = 1; i < max; ++i)         // loop
+{
+    sum += i;
+}
+alert("The sum is: " + sum);
+```
 
 Don't worry too much if you don't understand what's going on above, we'll cover it later.
 
