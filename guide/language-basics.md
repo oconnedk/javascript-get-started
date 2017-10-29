@@ -159,7 +159,7 @@ Functions can be **built-in** to the language (e.g. ```isNaN("dave")``` - ```isN
 
 Where they are user-defined, it will be either *you* that created the function or someone else (which is the case if you use a *library* - more on that later).
 
-Functions often receive one or more *parameters* and typically *return* a value, so in the example of the ```isNaN``` function, which takes a single parameter (*value*) `true` would be returned as "dave" is not a number. We can capture the result in a *variable*:
+Functions often receive one or more *parameters* and typically *return* a value (remember those words - they'll come in useful, below), so in the example of the ```isNaN``` function, which takes a single parameter (*value*) `true` would be returned as "dave" is not a number. We can capture the result in a *variable*:
  
 ```javascript
 var daveIsNotANumber = isNaN("dave");
@@ -171,7 +171,7 @@ So, putting some of what we've learnt so far, that line of code declares a *cons
 
 Sometimes the functions provided by JavaScript are not quite enough and you want to do something different. That is where you will write you own function.
 
-So, using the example, above, we might want a simple function to determine whether a value *is* a number. Like this, maybe:
+So, using the example, above, we might want a simple function to determine whether a value *is* a number. It will take in a parameter (let's call it: `value`) and *return* a boolean (`true`/ `false`) depending on whether it *is* or *isn't* a number. Like this, maybe:
 
 ```javascript
 function isNumber(value)
@@ -188,6 +188,8 @@ var stringIsNumeric = isNumber("216");
 ```
 
 Now, we have newly-declared *variables*, ```ipAddressIsNumeric``` which have the values: `false` and `true`, because the constant `"216.58.206.78"` is not a number, but the constant string `"216"` *can* be coalesced (more on that later) into a number.
+
+Both of the variables have the values `true` or `false` because they were *assigned* the result of the function call which *returned* the boolean value.
 
 ### Operators and Assignments
 
