@@ -162,7 +162,7 @@ Where they are user-defined, it will be either *you* that created the function o
 Functions often receive one or more *parameters* and typically *return* a value, so in the example of the ```isNaN``` function, which takes a single parameter (*value*) `true` would be returned as "dave" is not a number. We can capture the result in a *variable*:
  
 ```javascript
-const daveIsNotANumber = isNaN("dave");
+var daveIsNotANumber = isNaN("dave");
 ```
 
 So, putting some of what we've learnt so far, that line of code declares a *constant* called ```daveIsNotANumber``` which is *assigned* with the value of ```isNaN("dave")```.
