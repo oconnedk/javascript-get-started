@@ -155,36 +155,39 @@ We are trying to find out whether a variable named *true* is "true". It makes th
 
 ### Functions
 
-Functions can be in-built to the language (e.g. ```length("ABC")``` - ```length``` will return the length of a string) or user-defined.
+Functions can be **built-in** to the language (e.g. ```isNaN("dave")``` - ```isNaN``` "is Not-a-Number" will return `true` or `false` depending on whether the parameter is a number or not) or **user-defined**.
 
 Where they are user-defined, it will be either *you* that created the function or someone else (which is the case if you use a *library* - more on that later).
 
-Functions often receive one or more *parameters* and typically *return* a value, so in the example of the ```length``` function, the number 3 would be returned for ```length("ABC")```. We can capture the result in a *variable*:
+Functions often receive one or more *parameters* and typically *return* a value, so in the example of the ```isNaN``` function, which takes a single parameter (*value*) `true` would be returned as "dave" is not a number. We can capture the result in a *variable*:
  
 ```javascript
-var nameLength = length("Peter Piper");
+const daveIsNotANumber = isNaN("dave");
 ```
 
-So, putting some of what we've learnt so far, that line of code declares a *variable* called ```nameLength``` which is *assigned* with the value of ```length("Peter Piper")```. ```length``` is a function, which in this case is passed a parameter with the *constant string* "Peter Piper".
+So, putting some of what we've learnt so far, that line of code declares a *constant* called ```daveIsNotANumber``` which is *assigned* with the value of ```isNaN("dave")```.
 
 #### User-defined Functions
 
-Sometimes the functions provided by JavaScript are not quite enough and you want to do something different. That is where you will write you own function. Like this:
+Sometimes the functions provided by JavaScript are not quite enough and you want to do something different. That is where you will write you own function.
+
+So, using the example, above, we might want a simple function to determine whether a value *is* a number. Like this, maybe:
 
 ```javascript
-function addValues(lhs, rhs)
+function isNumber(value)
 {
-    return lhs + rhs;
+    return !isNaN(value);
 }
 ```
 
-In case you haven't already figured it out, that function returns the sum of the two variables, ```lhs``` and ```rhs```. And this is how you might call it:
+In case you haven't already figured it out, because `isNaN` tells us whether a value *is not* a number, we *negate* that value (`false` becomes `true`, `true` becomes `false`). This is how you might call it:
 
 ```javascript
-var sum = addValues(5, 6);
+var ipAddressIsNumeric = isNumber("216.58.206.78");
+var stringIsNumeric = isNumber("216");
 ```
 
-Now, we have a newly-declared *variable*, ```sum``` which has the result of ```5``` + ```6```, so ```11```. ```5``` and ```6``` are *constants* which are passed as *parameters* to the function.
+Now, we have newly-declared *variables*, ```ipAddressIsNumeric``` which have the values: `false` and `true`, because the constant `"216.58.206.78"` is not a number, but the constant string `"216"` *can* be coalesced (more on that later) into a number.
 
 ### Operators and Assignments
 
