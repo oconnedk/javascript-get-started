@@ -26,3 +26,7 @@ var ageBetween18And21 = age >= 18 && age <= 21;  // true
 var doesntNeedToWork = age <16 || age >= 65;     // false
 var isNot21 = age != 21;                         // true
 ```
+
+### Input and Output
+
+[Keep reading](/guide/language-input-and-output.md)
