@@ -20,7 +20,12 @@ If I ask for a number I really should validate that a number has been provided.
 
 In our examples so far we've been using the `prompt` function to get input from the user. As well as the prompt (the message displayed to the user), there is a box for the user to enter their input as well as **OK** and **Cancel** buttons. What do you think happens if the user just presses the **Enter** button without entering any value or the **Cancel** button?
 
-You can [try it out, here](https://jsfiddle.net/oconnedk/q4n0oyks/). Run it twice: once pressing "Enter", the second time hitting the "Cancel" button. You will need the "inspector" console window open (*F12* in Chrome) to see the output.
+You can [try it out, here](https://jsfiddle.net/oconnedk/q4n0oyks/). Run it twice: once pressing "Enter", the second time hitting the "Cancel" button.
+
+> **Note:**
+> You will need the "inspector" console window open (*F12* in Chrome) to see the output.
+> More info [here](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)
+> Once you have the inspector/ Developer Tools window open, select the "console" tab
 
 So, we can now see that it's possible the user to enter "nothing". And there are two versions of nothing. One where they just press **OK**, which is just passed through as an empty string (""), the other where they press **Cancel** (or press the "escape" button), which results in the special **null** value.
 
