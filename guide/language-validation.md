@@ -35,3 +35,9 @@ So, "number validation" for example, needs to cater for
 - null (e.g. where "Cancel" is pressed)
 - empty (e.g. where "Enter" is pressed, but no value entered)
 - an actual value. Note that prompt [*always* provides a string value](https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt) - even if you enter something which "looks like" a number. E.g. "3.141592"
+
+
+### To-Do
+
+- Debugging using browser
+- Assignments
