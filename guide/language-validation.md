@@ -24,7 +24,7 @@ You can [try it out, here](https://jsfiddle.net/oconnedk/q4n0oyks/). Run it twic
 
 So, we can now see that it's possible the user to enter "nothing". And there are two versions of nothing. One where they just press **OK**, which is just passed through as an empty string (""), the other where they press **Cancel** (or press the "escape" button), which results in the special **null** value.
 
-So, back on-topic: just because we ask for input, or ask for a number doesn't mean we'll get a number, which is where *validation* comes in.
+So, back on-topic: just because we ask for input, or ask for a number doesn't mean we'll get a number or even input , which is where *validation* comes in.
 
 So, "number validation" for example, needs to cater for
 - null (e.g. where "Cancel" is pressed)
