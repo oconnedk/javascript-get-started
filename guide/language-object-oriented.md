@@ -74,7 +74,7 @@ function addPerson(firstName, surname, address, postcode)
 
 Here, we've used the simple object notation (see above) to create an entry (`entry`) which has the properties: `firstName`, `surname`, `address` and `postcode`.
 
-We now want to add the date of birth to the list - to ensure, for exaple, that only adults are in the list.
+We now want to add the date of birth to the list - to ensure, for example, that only adults are in the list.
 
 ```javascript
 let list = [];
@@ -131,7 +131,7 @@ function addPerson(toThisList, id, firstName, surname, address, postcode, dateOf
 addPerson(list, 1, "Dave", "Doolittle", "12 High Street,Camden", "NW1 0JA", "26/7/2000");
 ```
 
-Every time we need to make a change to `addPerson`, we need to amend **every** call to `addPerson`.
+Every time we need to make a change to `addPerson`, we need to amend **every** call to `addPerson`. And that function's parameter list is getting longer-and-longer (hence more complicated).
 
 ### The OOP Way
 
@@ -155,10 +155,39 @@ class Person
 }
 
 let dave = new Person("Dave", "Doolittle", "12 High Street,Camden", "NW1 0JA", "26/7/2000");
+console.log(dave);  // Show that it's worked
 ```
 
 So, what's going on there, then? 
 - line 1: declares the class `Person`
 - line 3: `constructor` is something special that is called when construct-ing the object
 - lines 5-9: use the special `this` keyword to declare and assign the properties: `firstName`, `surname`, `address`, `postcode` and `dateOfBirth`
-- finally, we create an object (or "instance", if you like) called `dave` - initialised with the same values as in our functional example.
+- finally, we create an object (or "instance", if you like) called `dave` - initialised with the same values as in our functional example. We use `console.log` as a simple test to show it's working
+
+It might be that we don't always have a person's address initially, so we could allow for the address to be added to the person later:
+
+```javascript
+class Person
+{
+    constructor(firstName, surname, dateOfBirth)
+    {
+        this.firstName = firstName;
+        this.surname = surname;
+        this.address = null;    // Initialise to null so that the property exists
+        this.postcode = null;   // Initialise to null so that the property exists
+        this.dateOfBirth = dateOfBirth;
+    }
+    
+    setAddress(address, postcode)
+    {
+        this.address = null;
+        this.postcode = null;
+    }
+}
+
+let dave = new Person("Dave", "Doolittle", "26/7/2000");
+dave.setAddress("12 High Street,Camden", "NW1 0JA");
+console.log(dave);  // Show that it's worked
+```
+
+With our amended code, we were able to create `dave` and later add his address. 
