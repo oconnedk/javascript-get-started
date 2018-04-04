@@ -41,3 +41,7 @@ So, "number validation" for example, needs to cater for
 
 - Debugging using browser
 - Assignments
+
+## Object Oriented Programming
+
+[Keep reading](/guide/language-object-oriented.md)
